@@ -427,22 +427,22 @@ func fst() {
 	switch input {
 	case "arch", "Arch":
 		fmt.Println("Setting configuration for Arch")
-		exec.Command("sudo", "mkdir", "/usr/aiopm").Run()
-		exec.Command("sudo", "touch", "/usr/aiopm/a1.cw").Run()
+		exec.Command("sudo", "mkdir", "/etc/aiopm").Run()
+		exec.Command("sudo", "touch", "/etc/aiopm/a1.cw").Run()
 	case "debian", "Debian":
 		fmt.Println("Setting configuration for Debian")
-		exec.Command("sudo", "mkdir", "/usr/aiopm").Run()
-		exec.Command("sudo", "touch", "/usr/aiopm/a2.cw").Run()
+		exec.Command("sudo", "mkdir", "/etc/aiopm").Run()
+		exec.Command("sudo", "touch", "/etc/aiopm/a2.cw").Run()
 	case "fedora", "Fedora":
 		fmt.Println("Setting configuration for Fedora")
-		exec.Command("sudo", "mkdir", "/usr/aiopm").Run()
-		exec.Command("sudo", "touch", "/usr/aiopm/a3.cw").Run()
+		exec.Command("sudo", "mkdir", "/etc/aiopm").Run()
+		exec.Command("sudo", "touch", "/etc/aiopm/a3.cw").Run()
 	case "opensuse", "Opensuse":
-		exec.Command("sudo", "mkdir", "/usr/aiopm").Run()
-		exec.Command("sudo", "touch", "/usr/aiopm/a4.cw").Run()
+		exec.Command("sudo", "mkdir", "/etc/aiopm").Run()
+		exec.Command("sudo", "touch", "/etc/aiopm/a4.cw").Run()
 	case "void", "Void":
-		exec.Command("sudo", "mkdir", "/usr/aiopm").Run()
-		exec.Command("sudo", "touch", "/usr/aiopm/a5.cw").Run()
+		exec.Command("sudo", "mkdir", "/etc/aiopm").Run()
+		exec.Command("sudo", "touch", "/etc/aiopm/a5.cw").Run()
 	default:
 		fmt.Println("Invalid input! Retrying")
 		systemPause()
@@ -480,31 +480,31 @@ func main() {
 	fmt.Println("\\__|  \\__|\\______| \\______/ \\__|      \\__|     \\__|")
 	fmt.Println("By VPeti")
 	time.Sleep(2 * time.Second)
-	_, err := os.Open("/usr/aiopm/a1.cw")
+	_, err := os.Open("/etc/aiopm/a1.cw")
 	if err == nil {
 		welcome()
 		arch()
 		return
 	}
-	_, err = os.Open("/usr/aiopm/a2.cw")
+	_, err = os.Open("/etc/aiopm/a2.cw")
 	if err == nil {
 		welcome()
 		deb()
 		return
 	}
-	_, err = os.Open("/usr/aiopm/a3.cw")
+	_, err = os.Open("/etc/aiopm/a3.cw")
 	if err == nil {
 		welcome()
 		fed()
 		return
 	}
-	_, err = os.Open("/usr/aiopm/a4.cw")
+	_, err = os.Open("/etc/aiopm/a4.cw")
 	if err == nil {
 		welcome()
 		opensuse()
 		return
 	}
-	_, err = os.Open("/usr/aiopm/a5.cw")
+	_, err = os.Open("/etc/aiopm/a5.cw")
 	if err == nil {
 		welcome()
 		voidl()
